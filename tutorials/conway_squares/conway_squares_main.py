@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import sys
 from pathlib import Path
-rng = np.random.default_rng(24)
+rng = np.random.default_rng(12)
 
 
 project_root = Path(__file__).resolve().parents[2]
@@ -13,13 +13,13 @@ sys.path.insert(0, str(project_root))
 from src.conway_functions import update_square_board
 
 # Initialize board
-board_size = 10  
+board_size = 30  
 number_of_generations = 100
 
 board = np.zeros(board_size**2)
 
 
-indices = rng.choice(board_size**2, size=50, replace=False)
+indices = rng.choice(board_size**2, size=200, replace=False)
 
 board[indices] = 1
 

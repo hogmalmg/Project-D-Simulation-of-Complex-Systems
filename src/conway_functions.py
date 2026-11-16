@@ -18,14 +18,14 @@ def update_square_board(board):
                             number_of_live_neighbours += 1
 
             if cell == 0: # If the cell is dead
-                if 0 <= cell <= 2 or 4 <= cell <= 8:
+                if 0 <= number_of_live_neighbours <= 2 or 4 <= number_of_live_neighbours <= 8:
                     board[i][j] = 0
-                elif cell == 3:
+                elif number_of_live_neighbours == 3:
                     board[i][j] = 1
             elif cell == 1: # If the cell is alive
-                if 0 <= cell <= 1 or 4 <= cell <= 8:
+                if 0 <= number_of_live_neighbours <= 1 or 4 <= number_of_live_neighbours <= 8:
                     board[i][j] = 0
-                elif 2 <= cell <= 3:
+                elif 2 <= number_of_live_neighbours <= 3:
                     board[i][j] = 1
 
     return board
