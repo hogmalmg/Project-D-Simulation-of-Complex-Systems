@@ -5,23 +5,23 @@ def update_board(board):
             cell = board[i][j]
             number_of_live_neighbours = 0
 
-            if board[(i - 1) % size_board][(j - 1) % size_board] == 1:
+            if board[i - 1][j - 1] == 1:
                 number_of_live_neighbours += 1
-            if board[(i - 1) % size_board][j] == 1:
+            if board[i - 1][j] == 1:
                 number_of_live_neighbours += 1
-            if board[(i - 1) % size_board][(j + 1) % size_board] == 1:
+            if board[i - 1][j + 1] == 1:
                 number_of_live_neighbours += 1
-            if board[i][(j - 1) % size_board] == 1:
+            if board[i][j - 1] == 1:
                 number_of_live_neighbours += 1
             if board[i][j] == 1:
                 number_of_live_neighbours += 1
-            if board[i][(j + 1) % size_board] == 1:
+            if board[i][j + 1] == 1:
                 number_of_live_neighbours += 1
-            if board[(i + 1) % size_board][(j - 1) % size_board] == 1:
+            if board[i + 1][j - 1] == 1:
                 number_of_live_neighbours += 1
-            if board[(i + 1) % size_board][j] == 1:
+            if board[i + 1][j] == 1:
                 number_of_live_neighbours += 1
-            if board[(i + 1) % size_board][(j + 1) % size_board] == 1:
+            if board[i + 1][j + 1] == 1:
                 number_of_live_neighbours += 1
 
             if cell == 0: # If the cell is dead
