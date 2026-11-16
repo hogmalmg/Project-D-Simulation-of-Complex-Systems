@@ -2,29 +2,20 @@ import numpy as np
 
 def update_square_board(board):
     size_board = len(board)
+
     for i in range(size_board):
         for j in range(size_board):
             cell = board[i][j]
             number_of_live_neighbours = 0
 
-            if board[i - 1][j - 1] == 1:
-                number_of_live_neighbours += 1
-            if board[i - 1][j] == 1:
-                number_of_live_neighbours += 1
-            if board[i - 1][j + 1] == 1:
-                number_of_live_neighbours += 1
-            if board[i][j - 1] == 1:
-                number_of_live_neighbours += 1
-            if board[i][j] == 1:
-                number_of_live_neighbours += 1
-            if board[i][j + 1] == 1:
-                number_of_live_neighbours += 1
-            if board[i + 1][j - 1] == 1:
-                number_of_live_neighbours += 1
-            if board[i + 1][j] == 1:
-                number_of_live_neighbours += 1
-            if board[i + 1][j + 1] == 1:
-                number_of_live_neighbours += 1
+            steps = [-1, 0, 1]
+            for m in steps:
+                for n in steps:
+                    if m == 0 and n == 0:
+                        continue
+                    if 0 <= (i+m) < size_board and 0 <= (j+n) < size_board:
+                        if board[i+m][j+n] == 1:
+                            number_of_live_neighbours += 1
 
             if cell == 0: # If the cell is dead
                 if 0 <= cell <= 2 or 4 <= cell <= 8:
@@ -37,6 +28,7 @@ def update_square_board(board):
                 elif 2 <= cell <= 3:
                     board[i][j] = 1
 
+    return board
 
 def update_hexagonal_board(board):
     #Padding the borad lets us the same code for all cells without getting indexation errors

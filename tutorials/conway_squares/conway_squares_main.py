@@ -10,7 +10,7 @@ rng = np.random.default_rng(24)
 project_root = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(project_root))
 
-from src.conway_functions import update_board
+from src.conway_functions import update_square_board
 
 # Initialize board
 board_size = 10  
@@ -33,7 +33,7 @@ ax.set_title("Generation 0")
 def animate(generation):
     global board
 
-    board = update_board(board)
+    board = update_square_board(board)
 
     img.set_data(board)
     ax.set_title(f"Generation {generation + 1}")
