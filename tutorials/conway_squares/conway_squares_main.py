@@ -19,7 +19,7 @@ number_of_generations = 100
 board = np.zeros(board_size**2)
 
 
-indices = rng.choice(board_size**2, size=200, replace=False)
+indices = rng.choice(board_size**2, size=250, replace=False)
 
 board[indices] = 1
 
