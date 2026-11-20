@@ -3,13 +3,18 @@
 ## Abstract
 Conway's Game of Life is a type of Cellular Automata (CA) [1], which can be described as a grid of cells. Each cell has a definite state, for example on or off, where the state of the cell changes at every time step, for some defined rules. These changes of the states are applied to the whole grid simultaneously[2].
 
-In Conway's Game of Life, the squares are either "alive" or "dead", where the living cells is simulated in a black  and the dead in white. Each cell is connected with eight other cells, its neigbours, and the ones of these that are alive is called living neighbours[1].
+In Conway's Game of Life, the squares are either "alive" or "dead", where the living cells is simulated in black and the dead in white. Each cell is connected with eight other cells, its neigbours, and the ones of these that are alive is called living neighbours[1].
 
 The rules of Conway's Game of life are:
 - If a live cell has two or three live neighbours, then the cell remains alive in the next generation. Otherwise the cell dies due to underpopulation or overpopulation[3].
 - If a dead cell has 3 live neigbours, the cell comes to life in the next generation[3].
 
 Conway's Game of Life is known for the variety of formed patterns with different behaviors. Still lifes are stable patterns where no cell are born or dies, because all of the cells keeps their states. Period Two are patterns that switches between two different states, and returns to its initial condition after two generations. Two examples of Period Two is Blinkers, that consists of three living cells that switches between horizontal and vertical orientation, and Oscillators, that is patterns that have a cycle repitition. Gliders consist of five live cells and return to their original shape after four generations, and have moved one cell diagonally. Glider guns are patterns that periodically generate new gliders[1].
+
+### Cellular Automata With Hexagonal Grids
+Another type of CA, is a type with hexagonal grids. 
+
+### Cellular Automata With Triangle Grids
 
 ## Method
 
